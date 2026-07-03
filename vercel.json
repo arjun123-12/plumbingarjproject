@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "runtime": "php:8.3",
+  "functions": {
+    "api/**/*.php": {
+      "runtime": "php:8.3"
+    },
+    "*.php": {
+      "runtime": "php:8.3"
+    }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "$1"
+    }
+  ],
+  "env": {
+    "VERCEL_URL": "@vercel_url"
+  }
+}
