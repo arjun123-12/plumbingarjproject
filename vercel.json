@@ -1,17 +1,8 @@
 {
   "version": 2,
-  "runtime": "php:8.3",
-  "functions": {
-    "api/**/*.php": {
-      "runtime": "php:8.3"
-    },
-    "*.php": {
-      "runtime": "php:8.3"
-    }
-  },
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "\/(.*)",
       "dest": "$1"
     }
   ],
