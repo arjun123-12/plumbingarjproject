@@ -25,7 +25,7 @@ $page_schema = json_encode([
   "description" => "Commercial sewer line diagnostics, video inspection, line excavations, and trenchless sewer pipe repairs across NYC."
 ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
 
-require_once '../includes/header.php'; 
+require_once dirname(__DIR__) . '/includes/header.php'; 
 ?>
 
 <!-- Service Hero Section -->
@@ -185,4 +185,4 @@ require_once '../includes/header.php';
     </div>
 </section>
 
-<?php require_once '../includes/footer.php'; ?>
+<?php require_once dirname(__DIR__) . '/includes/footer.php'; ?>

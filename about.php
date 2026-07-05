@@ -42,7 +42,7 @@ $page_schema = json_encode([
   ]
 ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
 
-require_once 'includes/header.php'; 
+require_once __DIR__ . '/includes/header.php'; 
 ?>
 
 <!-- About Hero Section -->
@@ -105,4 +105,4 @@ require_once 'includes/header.php';
     </div>
 </section>
 
-<?php require_once 'includes/footer.php'; ?>
+<?php require_once __DIR__ . '/includes/footer.php'; ?>

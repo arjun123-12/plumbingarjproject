@@ -25,7 +25,7 @@ $page_schema = json_encode([
   "description" => "Expert toilet repair, shower valve replacement, tub plumbing, and faucet repair services across NYC's five boroughs."
 ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
 
-require_once '../includes/header.php'; 
+require_once dirname(__DIR__) . '/includes/header.php'; 
 ?>
 
 <!-- Service Hero Section -->
@@ -185,4 +185,4 @@ require_once '../includes/header.php';
     </div>
 </section>
 
-<?php require_once '../includes/footer.php'; ?>
+<?php require_once dirname(__DIR__) . '/includes/footer.php'; ?>
