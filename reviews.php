@@ -28,7 +28,7 @@ $page_schema = json_encode([
         "ratingValue" => "4.9",
         "reviewCount" => "1240"
       ]
-    ]
+      ],
   ]
 ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
 
