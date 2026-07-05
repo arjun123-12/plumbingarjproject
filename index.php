@@ -1,7 +1,78 @@
 <?php 
 $path_prefix = '';
-$page_title = "Professional 24/7 Plumbing Service in New York, NY";
-$page_desc = "Roto-Rooter is NYC's most trusted plumbing company. Fast, reliable, and professional plumbing solutions. Call 212-687-1726 today.";
+$page_title = "Professional 24/7 Plumbing Service in New York City";
+$page_desc = "Roto-Rooter is New York City's premier 24/7 plumbing & drain cleaning company. Fast emergency services, upfront pricing, licensed plumbers. Call 212-687-1726.";
+
+// Construct Dynamic JSON-LD Schema
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+$host = $_SERVER['HTTP_HOST'];
+$base_url = $protocol . $host . '/';
+
+$page_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "PlumbingService",
+  "name" => "Roto-Rooter Plumbing & Drain Service (New York)",
+  "image" => $base_url . "assets/images/roto_plumber.png",
+  "@id" => $base_url . "#plumbing-service",
+  "url" => $base_url,
+  "telephone" => "212-687-1726",
+  "priceRange" => "$$",
+  "address" => [
+    "@type" => "PostalAddress",
+    "streetAddress" => "120 Broadway, Suite 400",
+    "addressLocality" => "New York",
+    "addressRegion" => "NY",
+    "postalCode" => "10271",
+    "addressCountry" => "US"
+  ],
+  "geo" => [
+    "@type" => "GeoCoordinates",
+    "latitude" => 40.7081,
+    "longitude" => -74.0111
+  ],
+  "openingHoursSpecification" => [
+    "@type" => "OpeningHoursSpecification",
+    "dayOfWeek" => [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens" => "00:00",
+    "closes" => "23:59"
+  ],
+  "sameAs" => [
+    "https://www.facebook.com/RotoRooter",
+    "https://www.twitter.com/RotoRooter",
+    "https://www.youtube.com/user/RotoRooterCorp"
+  ],
+  "areaServed" => [
+    [
+      "@type" => "AdministrativeArea",
+      "name" => "Manhattan"
+    ],
+    [
+      "@type" => "AdministrativeArea",
+      "name" => "Brooklyn"
+    ],
+    [
+      "@type" => "AdministrativeArea",
+      "name" => "Queens"
+    ],
+    [
+      "@type" => "AdministrativeArea",
+      "name" => "Bronx"
+    ],
+    [
+      "@type" => "AdministrativeArea",
+      "name" => "Staten Island"
+    ]
+  ]
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+
 require_once 'includes/header.php'; 
 ?>
 
@@ -63,7 +134,7 @@ require_once 'includes/header.php';
                 <i class="fa-solid fa-clock-rotate-left"></i>
             </div>
             <div class="highlight-info">
-                <h3>24/7 Emergency Service</h3>
+                <h2>24/7 Emergency Service</h2>
                 <p>We're always here when you need us</p>
             </div>
         </div>
@@ -74,7 +145,7 @@ require_once 'includes/header.php';
                 <i class="fa-solid fa-shield-halved"></i>
             </div>
             <div class="highlight-info">
-                <h3>Upfront Pricing</h3>
+                <h2>Upfront Pricing</h2>
                 <p>No hidden fees ever - guaranteed</p>
             </div>
         </div>
@@ -85,7 +156,7 @@ require_once 'includes/header.php';
                 <i class="fa-solid fa-user-tie"></i>
             </div>
             <div class="highlight-info">
-                <h3>Licensed & Insured</h3>
+                <h2>Licensed & Insured</h2>
                 <p>Trusted professionals you can count on</p>
             </div>
         </div>
@@ -96,7 +167,7 @@ require_once 'includes/header.php';
                 <i class="fa-solid fa-thumbs-up"></i>
             </div>
             <div class="highlight-info">
-                <h3>Satisfaction Guaranteed</h3>
+                <h2>Satisfaction Guaranteed</h2>
                 <p>We stand behind our work 100%</p>
             </div>
         </div>

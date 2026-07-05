@@ -1,7 +1,47 @@
 <?php 
 $path_prefix = '';
-$page_title = "About Us";
-$page_desc = "Learn about Roto-Rooter, New York City's leading plumbing and drain cleaning company since 1935.";
+$page_title = "About Roto-Rooter Plumbing New York City | Since 1935";
+$page_desc = "Learn about the history, core pillars, and dedication of Roto-Rooter, New York City's leading plumbing and drain cleaning company since 1935.";
+
+// Construct Dynamic JSON-LD Schema
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+$host = $_SERVER['HTTP_HOST'];
+$base_url = $protocol . $host . '/';
+
+$page_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@graph" => [
+    [
+      "@type" => "AboutPage",
+      "@id" => $base_url . "about.php#webpage",
+      "url" => $base_url . "about.php",
+      "name" => "About Roto-Rooter Plumbing New York City",
+      "description" => "Learn about the history, commitment, and core pillars of Roto-Rooter New York.",
+      "isPartOf" => [
+        "@type" => "WebSite",
+        "@id" => $base_url . "#website",
+        "url" => $base_url,
+        "name" => "Roto-Rooter New York"
+      ]
+    ],
+    [
+      "@type" => "PlumbingService",
+      "@id" => $base_url . "#plumbing-service",
+      "name" => "Roto-Rooter Plumbing & Drain Service (New York)",
+      "url" => $base_url,
+      "telephone" => "212-687-1726",
+      "address" => [
+        "@type" => "PostalAddress",
+        "streetAddress" => "120 Broadway, Suite 400",
+        "addressLocality" => "New York",
+        "addressRegion" => "NY",
+        "postalCode" => "10271",
+        "addressCountry" => "US"
+      ]
+    ]
+  ]
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+
 require_once 'includes/header.php'; 
 ?>
 
@@ -15,7 +55,7 @@ require_once 'includes/header.php';
         </div>
         <div style="display:flex; align-items:center;" class="reveal-fade-right">
             <div class="glow-card" style="width: 100%; box-shadow: 0 4px 20px rgba(6, 18, 44, 0.04);">
-                <h3 style="color: var(--rr-red); margin-bottom: 20px;"><i class="fa-solid fa-quote-left"></i> Our Commitment</h3>
+                <h2 style="color: var(--rr-red); margin-bottom: 20px; font-size: 1.5rem; font-family: var(--font-heading); font-weight: 800; text-transform: uppercase;"><i class="fa-solid fa-quote-left"></i> Our Commitment</h2>
                 <p style="font-size: 1.1rem; line-height: 1.7; font-style: italic;">"To deliver prompt, professional plumbing and drain cleaning services that exceed customer expectations. We stand behind our work with our satisfaction guarantee, ensuring every plumbing system runs smoothly."</p>
             </div>
         </div>

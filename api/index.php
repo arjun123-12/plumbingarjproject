@@ -17,6 +17,10 @@ if (empty($request_path) || $request_path === 'index.php') {
     require BASE_PATH . '/about.php';
 } elseif ($request_path === 'contact.php') {
     require BASE_PATH . '/contact.php';
+} elseif ($request_path === 'sitemap.xml') {
+    require BASE_PATH . '/api/sitemap.php';
+} elseif ($request_path === 'robots.txt') {
+    require BASE_PATH . '/api/robots.php';
 } else {
     // Check if the file exists in the root
     $file = BASE_PATH . '/' . $request_path;

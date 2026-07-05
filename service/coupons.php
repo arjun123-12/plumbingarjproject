@@ -2,6 +2,53 @@
 $path_prefix = '../';
 $page_title = "Plumbing Coupons & Special Offers in New York City";
 $page_desc = "Discount plumbing coupons, special promotional offers, and senior citizen discounts in NYC. Roto-Rooter offers 24/7 service. Call 212-687-1726 today.";
+
+// Construct Dynamic JSON-LD Schema
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+$host = $_SERVER['HTTP_HOST'];
+$base_url = $protocol . $host . '/';
+
+$page_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@graph" => [
+    [
+      "@type" => "WebPage",
+      "@id" => $base_url . "service/coupons.php#webpage",
+      "url" => $base_url . "service/coupons.php",
+      "name" => "Plumbing Coupons & Special Offers in New York City",
+      "description" => "Save on your next plumbing service with Roto-Rooter New York coupons. Discounts on drain cleaning, leak detection, water heaters, and more."
+    ],
+    [
+      "@type" => "PlumbingService",
+      "@id" => $base_url . "#plumbing-service",
+      "name" => "Roto-Rooter Plumbing & Drain Service (New York)",
+      "url" => $base_url,
+      "telephone" => "212-687-1726",
+      "offers" => [
+        [
+          "@type" => "Offer",
+          "name" => "Senior Citizen & Military Discount",
+          "description" => "10% off any plumbing service for senior citizens and active/retired military personnel.",
+          "priceCurrency" => "USD",
+          "price" => "0.00",
+          "valueAddedServiceSpecification" => [
+            "@type" => "PropertyValue",
+            "name" => "Discount",
+            "value" => "10%"
+          ]
+        ],
+        [
+          "@type" => "Offer",
+          "name" => "$50 Off Water Heater Installation",
+          "description" => "$50 off new water heater replacement or installation.",
+          "priceCurrency" => "USD",
+          "price" => "50.00"
+        ]
+      ]
+    ]
+  ]
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+
 require_once '../includes/header.php'; 
 ?>
 

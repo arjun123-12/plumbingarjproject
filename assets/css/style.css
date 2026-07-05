@@ -475,7 +475,8 @@ a {
     flex-shrink: 0;
 }
 
-.highlight-info h3 {
+.highlight-info h3,
+.highlight-info h2 {
     font-family: var(--font-heading);
     font-size: 0.95rem;
     font-weight: 800;
@@ -1514,7 +1515,8 @@ section[style*="background-color:#f7f8fb"] {
     border: 1px solid rgba(6, 18, 44, 0.06);
 }
 
-.info-content h4 {
+.info-content h4,
+.info-content h3 {
     font-family: var(--font-heading);
     font-size: 1.05rem;
     font-weight: 800;

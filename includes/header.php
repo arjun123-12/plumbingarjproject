@@ -1,12 +1,48 @@
-<?php require_once 'config.php'; ?>
+<?php 
+require_once 'config.php'; 
+
+// Determine canonical URL dynamically
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || (isset($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == 443)) ? "https://" : "http://";
+$host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'localhost';
+$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+// Normalize routing path
+$request_path = str_replace('/api', '', $uri);
+if (basename($request_path) === 'index.php') {
+    $request_path = dirname($request_path);
+}
+$canonical_url = rtrim($protocol . $host . $request_path, '/');
+if (empty(parse_url($canonical_url, PHP_URL_PATH))) {
+    $canonical_url .= '/';
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo isset($page_title) ? $page_title . ' | ' . APP_NAME : APP_NAME . ' - Professional Plumbing & Drain Services'; ?></title>
-    <meta name="description" content="<?php echo isset($page_desc) ? $page_desc : 'Trusted professional 24/7 plumbing solutions when you need them most.'; ?>">
+    <title><?php echo isset($page_title) ? htmlspecialchars($page_title) . ' | ' . APP_NAME : APP_NAME . ' - Professional Plumbing & Drain Services'; ?></title>
+    <meta name="description" content="<?php echo htmlspecialchars(isset($page_desc) ? $page_desc : 'Trusted professional 24/7 plumbing solutions when you need them most.'); ?>">
+    <meta name="robots" content="index, follow">
     
+    <!-- Canonical URL -->
+    <link rel="canonical" href="<?php echo htmlspecialchars($canonical_url); ?>">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<?php echo htmlspecialchars($canonical_url); ?>">
+    <meta property="og:title" content="<?php echo htmlspecialchars(isset($page_title) ? $page_title : APP_NAME); ?>">
+    <meta property="og:description" content="<?php echo htmlspecialchars(isset($page_desc) ? $page_desc : 'Trusted professional 24/7 plumbing solutions.'); ?>">
+    <meta property="og:image" content="<?php echo htmlspecialchars($protocol . $host . '/' . (isset($path_prefix) ? $path_prefix : '') . 'assets/images/roto_plumber.png'); ?>">
+    <meta property="og:site_name" content="<?php echo htmlspecialchars(APP_NAME); ?>">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="<?php echo htmlspecialchars($canonical_url); ?>">
+    <meta property="twitter:title" content="<?php echo htmlspecialchars(isset($page_title) ? $page_title : APP_NAME); ?>">
+    <meta property="twitter:description" content="<?php echo htmlspecialchars(isset($page_desc) ? $page_desc : 'Trusted professional 24/7 plumbing solutions.'); ?>">
+    <meta property="twitter:image" content="<?php echo htmlspecialchars($protocol . $host . '/' . (isset($path_prefix) ? $path_prefix : '') . 'assets/images/roto_plumber.png'); ?>">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +53,13 @@
     
     <!-- Main Style Sheet -->
     <link rel="stylesheet" href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>assets/css/style.css">
+    
+    <!-- Dynamic JSON-LD Structured Data Schema -->
+    <?php if (isset($page_schema) && !empty($page_schema)): ?>
+    <script type="application/ld+json">
+    <?php echo $page_schema; ?>
+    </script>
+    <?php endif; ?>
 </head>
 <body>
 

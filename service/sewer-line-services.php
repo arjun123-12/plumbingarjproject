@@ -2,6 +2,29 @@
 $path_prefix = '../';
 $page_title = "Commercial Sewer Services in NYC";
 $page_desc = "Roto-Rooter provides commercial sewer line diagnostics, excavations, and trenchless repairs. Available 24/7 with no extra charges. Call 212-687-1726 today.";
+
+// Construct Dynamic JSON-LD Schema
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+$host = $_SERVER['HTTP_HOST'];
+$base_url = $protocol . $host . '/';
+
+$page_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "Service",
+  "name" => "Commercial Sewer Line Services",
+  "serviceType" => "Sewer Services",
+  "provider" => [
+    "@type" => "PlumbingService",
+    "name" => "Roto-Rooter Plumbing & Drain Service (New York)",
+    "telephone" => "212-687-1726",
+    "url" => $base_url
+  ],
+  "areaServed" => [
+    ["@type" => "AdministrativeArea", "name" => "New York City"]
+  ],
+  "description" => "Commercial sewer line diagnostics, video inspection, line excavations, and trenchless sewer pipe repairs across NYC."
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+
 require_once '../includes/header.php'; 
 ?>
 

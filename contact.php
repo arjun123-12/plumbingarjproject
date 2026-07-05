@@ -1,7 +1,47 @@
 <?php 
 $path_prefix = '';
-$page_title = "Schedule Service";
-$page_desc = "Request plumbing service or ask for a free estimate from Roto-Rooter New York. Available 24/7.";
+$page_title = "Contact Roto-Rooter New York | 24/7 Emergency Plumbing";
+$page_desc = "Get in touch with Roto-Rooter NYC for 24/7 plumbing emergency dispatch. Reach our Manhattan headquarters, call 212-687-1726, or schedule an estimate online.";
+
+// Construct Dynamic JSON-LD Schema
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+$host = $_SERVER['HTTP_HOST'];
+$base_url = $protocol . $host . '/';
+
+$page_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@graph" => [
+    [
+      "@type" => "ContactPage",
+      "@id" => $base_url . "contact.php#webpage",
+      "url" => $base_url . "contact.php",
+      "name" => "Contact Roto-Rooter Plumbing New York",
+      "description" => "Schedule emergency repairs, drain cleaning, or request a free estimate from Roto-Rooter New York.",
+      "isPartOf" => [
+        "@type" => "WebSite",
+        "@id" => $base_url . "#website",
+        "url" => $base_url,
+        "name" => "Roto-Rooter New York"
+      ]
+    ],
+    [
+      "@type" => "PlumbingService",
+      "@id" => $base_url . "#plumbing-service",
+      "name" => "Roto-Rooter Plumbing & Drain Service (New York)",
+      "url" => $base_url,
+      "telephone" => "212-687-1726",
+      "address" => [
+        "@type" => "PostalAddress",
+        "streetAddress" => "120 Broadway, Suite 400",
+        "addressLocality" => "New York",
+        "addressRegion" => "NY",
+        "postalCode" => "10271",
+        "addressCountry" => "US"
+      ]
+    ]
+  ]
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+
 require_once 'includes/header.php'; 
 
 // Basic Form Handler
@@ -34,14 +74,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="contact-grid">
             <!-- Contact Details Card -->
             <div class="contact-info-card reveal-fade-left" style="box-shadow: 0 4px 20px rgba(6, 18, 44, 0.04);">
-                <h3 style="margin-bottom: 24px; font-size: 1.4rem; font-family: var(--font-heading); font-weight: 900; color: var(--rr-blue); text-transform: uppercase;">Dispatch Information</h3>
+                <h2 style="margin-bottom: 24px; font-size: 1.4rem; font-family: var(--font-heading); font-weight: 900; color: var(--rr-blue); text-transform: uppercase;">Dispatch Information</h2>
                 
                 <div class="info-item">
                     <div class="info-icon" style="background-color: var(--rr-light-blue); color: var(--rr-blue);">
                         <i class="fa-solid fa-location-dot"></i>
                     </div>
                     <div class="info-content">
-                        <h4 style="font-family: var(--font-heading); font-weight: 800; color: var(--rr-blue);">Manhattan Headquarters</h4>
+                        <h3 style="font-family: var(--font-heading); font-weight: 800; color: var(--rr-blue); margin: 0 0 6px 0;">Manhattan Headquarters</h3>
                         <p>120 Broadway, Suite 400<br>New York, NY 10271</p>
                     </div>
                 </div>
@@ -51,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <i class="fa-solid fa-envelope"></i>
                     </div>
                     <div class="info-content">
-                        <h4 style="font-family: var(--font-heading); font-weight: 800; color: var(--rr-blue);">Email Us</h4>
+                        <h3 style="font-family: var(--font-heading); font-weight: 800; color: var(--rr-blue); margin: 0 0 6px 0;">Email Us</h3>
                         <p><a href="mailto:service@rotorooter-nyc.com" style="color: var(--text-muted);">service@rotorooter-nyc.com</a></p>
                     </div>
                 </div>
@@ -61,7 +101,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <i class="fa-solid fa-phone"></i>
                     </div>
                     <div class="info-content">
-                        <h4 style="font-family: var(--font-heading); font-weight: 800; color: var(--rr-blue);">Call Us (24/7 Dispatch)</h4>
+                        <h3 style="font-family: var(--font-heading); font-weight: 800; color: var(--rr-blue); margin: 0 0 6px 0;">Call Us (24/7 Dispatch)</h3>
                         <p><strong>212-687-1726</strong> (Local Phone)<br><strong>(800) 768-6911</strong> (Toll-Free)</p>
                     </div>
                 </div>

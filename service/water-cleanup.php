@@ -2,6 +2,29 @@
 $path_prefix = '../';
 $page_title = "Water Damage Restoration & Cleanup in NYC";
 $page_desc = "Roto-Rooter offers emergency water extraction, drying, and structural sanitization. Available 24/7. Direct insurance billing. Call 212-687-1726 today.";
+
+// Construct Dynamic JSON-LD Schema
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+$host = $_SERVER['HTTP_HOST'];
+$base_url = $protocol . $host . '/';
+
+$page_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "Service",
+  "name" => "Water Damage Restoration & Cleanup Services",
+  "serviceType" => "Water Damage Restoration",
+  "provider" => [
+    "@type" => "PlumbingService",
+    "name" => "Roto-Rooter Plumbing & Drain Service (New York)",
+    "telephone" => "212-687-1726",
+    "url" => $base_url
+  ],
+  "areaServed" => [
+    ["@type" => "AdministrativeArea", "name" => "New York City"]
+  ],
+  "description" => "Emergency water extraction, structural drying, basement pumping, sewage sanitation, and cleanup services in NYC."
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+
 require_once '../includes/header.php'; 
 ?>
 

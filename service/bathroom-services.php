@@ -1,7 +1,30 @@
 <?php 
 $path_prefix = '../';
 $page_title = "Bathroom Plumbing & Fixture Services in NYC";
-$page_desc = "Roto-Rooter offers professional toilet repairs, shower valve replacements, tub plumbing, and faucet fixes. 24/7 service. Call 212-687-1726 today.";
+$page_desc = "Professional NYC bathroom plumbing services: toilet repairs, shower valves, faucet fixes, and drain cleaning. 24/7 emergency dispatch. Call 212-687-1726.";
+
+// Construct Dynamic JSON-LD Schema
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+$host = $_SERVER['HTTP_HOST'];
+$base_url = $protocol . $host . '/';
+
+$page_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "Service",
+  "name" => "Bathroom Plumbing & Fixture Services",
+  "serviceType" => "Bathroom Plumbing",
+  "provider" => [
+    "@type" => "PlumbingService",
+    "name" => "Roto-Rooter Plumbing & Drain Service (New York)",
+    "telephone" => "212-687-1726",
+    "url" => $base_url
+  ],
+  "areaServed" => [
+    ["@type" => "AdministrativeArea", "name" => "New York City"]
+  ],
+  "description" => "Expert toilet repair, shower valve replacement, tub plumbing, and faucet repair services across NYC's five boroughs."
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+
 require_once '../includes/header.php'; 
 ?>
 

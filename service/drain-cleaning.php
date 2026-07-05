@@ -2,6 +2,29 @@
 $path_prefix = '../';
 $page_title = "Drain Cleaning & Clogged Drain Services in NYC";
 $page_desc = "Roto-Rooter quickly clears clogged bathtubs, sinks, toilets, and sewer lines. Available 24/7 with no extra charges for nights and weekends. Call 212-687-1726 today.";
+
+// Construct Dynamic JSON-LD Schema
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+$host = $_SERVER['HTTP_HOST'];
+$base_url = $protocol . $host . '/';
+
+$page_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "Service",
+  "name" => "Drain Cleaning & Clogged Drain Services",
+  "serviceType" => "Drain Cleaning",
+  "provider" => [
+    "@type" => "PlumbingService",
+    "name" => "Roto-Rooter Plumbing & Drain Service (New York)",
+    "telephone" => "212-687-1726",
+    "url" => $base_url
+  ],
+  "areaServed" => [
+    ["@type" => "AdministrativeArea", "name" => "New York City"]
+  ],
+  "description" => "Fast and professional drain cleaning services for clogged bathtubs, sinks, toilets, and main sewer lines across New York City."
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+
 require_once '../includes/header.php'; 
 ?>
 

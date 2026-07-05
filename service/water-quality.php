@@ -2,6 +2,29 @@
 $path_prefix = '../';
 $page_title = "Water Quality & Filtration in NYC";
 $page_desc = "Roto-Rooter provides professional water testing, filter system installations, and water softeners. Available 24/7. Call 212-687-1726 today.";
+
+// Construct Dynamic JSON-LD Schema
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+$host = $_SERVER['HTTP_HOST'];
+$base_url = $protocol . $host . '/';
+
+$page_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "Service",
+  "name" => "Water Quality & Filtration Services",
+  "serviceType" => "Water Quality Services",
+  "provider" => [
+    "@type" => "PlumbingService",
+    "name" => "Roto-Rooter Plumbing & Drain Service (New York)",
+    "telephone" => "212-687-1726",
+    "url" => $base_url
+  ],
+  "areaServed" => [
+    ["@type" => "AdministrativeArea", "name" => "New York City"]
+  ],
+  "description" => "Professional water testing, whole-house water filter installations, reverse osmosis filtration, and water softener systems in NYC."
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+
 require_once '../includes/header.php'; 
 ?>
 
