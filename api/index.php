@@ -3,7 +3,7 @@
 $request_uri = $_SERVER['REQUEST_URI'];
 $request_path = parse_url($request_uri, PHP_URL_PATH);
 
-// Remove /api prefix if present
+
 $request_path = str_replace('/api', '', $request_path);
 $request_path = ltrim($request_path, '/');
 
