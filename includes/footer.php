@@ -31,13 +31,10 @@
                 <div class="footer-col">
                     <h3>Services</h3>
                     <ul class="footer-links-list">
+                        <li><a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>service/water-damage.php">Water Damage <i class="fa-solid fa-chevron-right"></i></a></li>
                         <li><a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>service/drain-cleaning.php">Drain Cleaning <i class="fa-solid fa-chevron-right"></i></a></li>
-                        <li><a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>service/plumbing-repair.php">Plumbing Repairs <i class="fa-solid fa-chevron-right"></i></a></li>
-                        <li><a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>service/water-heaters.php">Water Heaters <i class="fa-solid fa-chevron-right"></i></a></li>
-                        <li><a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>service/sewer-line-services.php">Sewer Line Services <i class="fa-solid fa-chevron-right"></i></a></li>
-                        <li><a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>service/water-cleanup.php">Water Cleanup <i class="fa-solid fa-chevron-right"></i></a></li>
-                        <li><a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>service/bathroom-services.php">Bathroom Services <i class="fa-solid fa-chevron-right"></i></a></li>
-                        <li><a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>service/plumbing-repair.php" style="color: var(--rr-blue); font-weight: 700;">View All Services <i class="fa-solid fa-chevron-right"></i></a></li>
+                        <li><a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>service/emergency-plumbing.php">Emergency Plumbing <i class="fa-solid fa-chevron-right"></i></a></li>
+                        <li><a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>service.php" style="color: var(--rr-blue); font-weight: 700;">View All Services <i class="fa-solid fa-chevron-right"></i></a></li>
                     </ul>
                 </div>
 
@@ -46,12 +43,9 @@
                     <h3>Company</h3>
                     <ul class="footer-links-list">
                         <li><a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>about.php">About Us <i class="fa-solid fa-chevron-right"></i></a></li>
-                        <li><a href="#">Why Roto-Rooter <i class="fa-solid fa-chevron-right"></i></a></li>
-                        <li><a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>service/coupons.php">Coupons & Offers <i class="fa-solid fa-chevron-right"></i></a></li>
-                        <li><a href="#">Financing <i class="fa-solid fa-chevron-right"></i></a></li>
-                        <li><a href="#">Careers <i class="fa-solid fa-chevron-right"></i></a></li>
-                        <li><a href="#">Blog <i class="fa-solid fa-chevron-right"></i></a></li>
+                        <li><a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>blog.php">Blog <i class="fa-solid fa-chevron-right"></i></a></li>
                         <li><a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>contact.php">Contact Us <i class="fa-solid fa-chevron-right"></i></a></li>
+                        <li><a href="#">Careers <i class="fa-solid fa-chevron-right"></i></a></li>
                     </ul>
                 </div>
 
@@ -60,11 +54,8 @@
                     <h3>Support</h3>
                     <ul class="footer-links-list">
                         <li><a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>contact.php">Schedule Service <i class="fa-solid fa-chevron-right"></i></a></li>
-                        <li><a href="#">FAQs <i class="fa-solid fa-chevron-right"></i></a></li>
-                        <li><a href="#">Customer Reviews <i class="fa-solid fa-chevron-right"></i></a></li>
-                        <li><a href="#">Service Areas <i class="fa-solid fa-chevron-right"></i></a></li>
-                        <li><a href="#">Privacy Policy <i class="fa-solid fa-chevron-right"></i></a></li>
-                        <li><a href="#">Terms of Use <i class="fa-solid fa-chevron-right"></i></a></li>
+                        <li><a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>reviews.php">Customer Reviews <i class="fa-solid fa-chevron-right"></i></a></li>
+                        <li><a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>sitemap.xml">Site Map <i class="fa-solid fa-chevron-right"></i></a></li>
                     </ul>
                 </div>
 

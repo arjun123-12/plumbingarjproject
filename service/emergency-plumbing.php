@@ -1,18 +1,18 @@
 <?php 
 $path_prefix = '../';
-$page_title = "Bathroom Plumbing & Fixture Services in NYC";
-$page_desc = "Professional NYC bathroom plumbing services: toilet repairs, shower valves, faucet fixes, and drain cleaning. 24/7 emergency dispatch. Call 212-687-1726.";
+$page_title = "Emergency Plumbing & 24/7 Rapid Repair in NYC";
+$page_desc = "Roto-Rooter provides professional emergency plumbing, burst pipe fixes, leak detection, and rapid repairs in NYC. Available 24/7 with zero extra charges for nights and weekends.";
 
 // Construct Dynamic JSON-LD Schema
-$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
-$host = $_SERVER['HTTP_HOST'];
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || (isset($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == 443)) ? "https://" : "http://";
+$host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'localhost';
 $base_url = $protocol . $host . '/';
 
 $page_schema = json_encode([
   "@context" => "https://schema.org",
   "@type" => "Service",
-  "name" => "Bathroom Plumbing & Fixture Services",
-  "serviceType" => "Bathroom Plumbing",
+  "name" => "Emergency Plumbing Repair Services",
+  "serviceType" => "Emergency Plumbing",
   "provider" => [
     "@type" => "PlumbingService",
     "name" => "Roto-Rooter Plumbing & Drain Service (New York)",
@@ -22,7 +22,7 @@ $page_schema = json_encode([
   "areaServed" => [
     ["@type" => "AdministrativeArea", "name" => "New York City"]
   ],
-  "description" => "Expert toilet repair, shower valve replacement, tub plumbing, and faucet repair services across NYC's five boroughs."
+  "description" => "Emergency plumbing repairs, burst pipe fixes, leak detection, and immediate solutions in NYC 24/7."
 ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
 
 require_once dirname(__DIR__) . '/includes/header.php'; 
@@ -36,9 +36,9 @@ require_once dirname(__DIR__) . '/includes/header.php';
         <div class="breadcrumbs">
             <a href="<?php echo $path_prefix; ?>index.php">Home</a>
             <span>/</span>
-            <a href="<?php echo $path_prefix; ?>service/plumbing-repair.php">Plumbing</a>
+            <a href="<?php echo $path_prefix; ?>service.php">Services</a>
             <span>/</span>
-            <span class="active">Bathroom Services</span>
+            <span class="active">Emergency Plumbing</span>
         </div>
 
         <!-- Hero Grid -->
@@ -51,16 +51,16 @@ require_once dirname(__DIR__) . '/includes/header.php';
                     <span>Fast. Clean. Reliable.</span>
                 </div>
                 
-                <h1 class="service-title">Bathroom Plumbing &<br>Fixture Services</h1>
+                <h1 class="service-title">Emergency Plumbing &<br>24/7 Repair Services</h1>
                 
-                <p class="service-desc">Roto-Rooter's plumbers fix leaking showers, install toilets, seal tubs, replace dripping sink faucets, and clear bathroom blockages with no mess left behind.</p>
+                <p class="service-desc">Roto-Rooter's emergency plumbers are ready 24/7 to resolve burst pipes, massive water leaks, sewer backups, and urgent plumbing failure in your home or business.</p>
                 
                 <div class="service-ctas-row">
                     <a href="<?php echo $path_prefix; ?>contact.php" class="btn btn-schedule" style="padding: 14px 28px;"><i class="fa-regular fa-calendar-days"></i> Schedule Online</a>
                     
                     <div class="coupon-tag-link">
-                        <i class="fa-solid fa-tag"></i>
-                        <span>Save Money! Check out available <a href="<?php echo $path_prefix; ?>service/coupons.php">coupons</a></span>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Available 24/7 for All Plumbing Emergencies</span>
                     </div>
                 </div>
             </div>
@@ -68,7 +68,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
             <!-- Right Media Column -->
             <div class="hero-media-col">
                 <div class="service-hero-media">
-                    <img src="<?php echo $path_prefix; ?>assets/images/roto_plumber.png" alt="Roto-Rooter bathroom plumber" class="service-hero-img">
+                    <img src="<?php echo $path_prefix; ?>assets/images/roto_plumber.png" alt="Roto-Rooter emergency plumber fixing copper pipes" class="service-hero-img">
                     <a href="<?php echo $path_prefix; ?>contact.php" class="service-hero-banner">
                         <div class="banner-left">
                             <i class="fa-regular fa-calendar-check"></i>
@@ -94,7 +94,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
             <div class="video-column">
                 <div class="video-card">
                     <div class="video-thumbnail-container">
-                        <img src="<?php echo $path_prefix; ?>assets/images/tech-consultant.png" alt="Roto-Rooter bathroom service video thumbnail" class="video-thumbnail-img">
+                        <img src="<?php echo $path_prefix; ?>assets/images/tech-consultant.png" alt="Roto-Rooter sonar leak detector video thumbnail" class="video-thumbnail-img">
                         <button class="video-play-btn" aria-label="Play video"><i class="fa-solid fa-play"></i></button>
                     </div>
                     <div class="video-controls-bar">
@@ -111,60 +111,60 @@ require_once dirname(__DIR__) . '/includes/header.php';
                         </div>
                     </div>
                 </div>
-                <span class="video-caption">WATCH: Roto-Rooter pressure balance valve installation</span>
+                <span class="video-caption">WATCH: Roto-Rooter leak detection technology in action</span>
             </div>
 
             <!-- Right Column: Descriptive Content -->
             <div class="difference-content">
                 <h2>The Roto-Rooter Difference</h2>
-                <p>Bathroom plumbing must balance form and function. Roto-Rooter plumbers combine precision plumbing with high-end fixture care, ensuring no damage to delicate tiles or custom vanities.</p>
-                <p>We carry major brand parts, so we can solve toilet valve leaks or shower cartridge drips on the very first visit.</p>
+                <p>Since 1935, Roto-Rooter has provided top-tier training to its plumbers, equipping them with advanced sonar leak locators, thermal diagnostic cameras, and high-quality materials to guarantee that minor repairs don't become structural disasters.</p>
+                <p>We still focus on doing repairs right the first time, ensuring that your pipe fittings, valves, and connections are durable and secure.</p>
             </div>
 
         </div>
     </div>
 </section>
 
-<!-- Professional Plumbing Versus DIY Handyman Section -->
+<!-- Plumbing Repair Versus Plumbing Patches Section -->
 <section class="versus-section">
     <div class="container">
         <div class="versus-card">
             
-            <h2 class="versus-title">Professional Plumbing Versus DIY Handyman</h2>
-            <p class="versus-subtitle-p">Know the risks of amateur bathroom plumbing fixes.</p>
+            <h2 class="versus-title">Plumbing Repair Versus Plumbing Patches</h2>
+            <p class="versus-subtitle-p">Understanding professional service vs temporary handiwork.</p>
             
             <div class="versus-grid">
                 
-                <!-- Item 1: SCALD PROTECTION -->
+                <!-- Item 1: PROFESSIONAL REPAIR -->
                 <div class="versus-item">
                     <div class="versus-icon-wrap">
-                        <i class="fa-solid fa-shower"></i>
+                        <i class="fa-solid fa-wrench"></i>
                     </div>
                     <div class="versus-item-content">
-                        <h3>Pressure Balance Valves</h3>
-                        <p>We install anti-scald pressure balanced shower valves that keep water temperature steady even when toilets flush, preventing thermal shocks.</p>
+                        <h3>Professional Repair</h3>
+                        <p>We locate the source of leaks using sonar diagnostics and structural imaging, replacing damaged pipes with industrial-grade copper or PEX lines.</p>
                     </div>
                 </div>
 
                 <!-- Item 2: THE ROTO-ROOTER WAY -->
                 <div class="versus-item">
                     <div class="versus-icon-wrap">
-                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-regular fa-circle-check"></i>
                     </div>
                     <div class="versus-item-content">
                         <h3>The Roto-Rooter Way</h3>
-                        <p>We install custom fixtures using lead-free brass fittings and verify all wax seals under load, preventing leaks from dripping into structural ceilings.</p>
+                        <p>We do not believe in quick fixes. Every connection is sealed using premium sealants, tested under pressure, and guaranteed for long-term durability.</p>
                     </div>
                 </div>
 
-                <!-- Item 3: AMATEUR SEALING -->
+                <!-- Item 3: AMATEUR PATCHES -->
                 <div class="versus-item">
                     <div class="versus-icon-wrap">
                         <i class="fa-solid fa-triangle-exclamation"></i>
                     </div>
                     <div class="versus-item-content">
-                        <h3>Improper Seals</h3>
-                        <p>DIY toilet resets often lead to misaligned wax rings, leaking sewer gases into bathrooms and rotting subfloors out over months before leaks are noticed.</p>
+                        <h3>Amateur Patches</h3>
+                        <p>Be cautious of cheap handymen using tape, sleeves, or epoxy glue patches. These quick fixes frequently lead to sudden bursts and expensive drywall damage.</p>
                     </div>
                 </div>
 
@@ -175,7 +175,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
                     </div>
                     <div class="versus-item-content">
                         <h3>Full Guarantee</h3>
-                        <p>All bathroom installations and repair works are backed by Roto-Rooter's comprehensive service guarantees, giving you total peace of mind.</p>
+                        <p>Our repairs are covered by comprehensive warranties, ensuring that in the rare event of a repeat issue, we return to fix it at zero cost to you.</p>
                     </div>
                 </div>
 

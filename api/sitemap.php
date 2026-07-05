@@ -21,57 +21,63 @@ echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
         <priority>0.8</priority>
     </url>
     <url>
-        <loc><?php echo $base_url; ?>contact.php</loc>
-        <lastmod>2026-07-05</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc><?php echo $base_url; ?>service/bathroom-services.php</loc>
-        <lastmod>2026-07-05</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc><?php echo $base_url; ?>service/coupons.php</loc>
+        <loc><?php echo $base_url; ?>service.php</loc>
         <lastmod>2026-07-05</lastmod>
         <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc><?php echo $base_url; ?>service/water-damage.php</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc><?php echo $base_url; ?>service/drain-cleaning.php</loc>
         <lastmod>2026-07-05</lastmod>
         <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc><?php echo $base_url; ?>service/emergency-plumbing.php</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc><?php echo $base_url; ?>blog.php</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc><?php echo $base_url; ?>blog-details.php?id=1</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc><?php echo $base_url; ?>blog-details.php?id=2</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc><?php echo $base_url; ?>blog-details.php?id=3</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc><?php echo $base_url; ?>reviews.php</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc><?php echo $base_url; ?>service/plumbing-repair.php</loc>
+        <loc><?php echo $base_url; ?>contact.php</loc>
         <lastmod>2026-07-05</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc><?php echo $base_url; ?>service/sewer-line-services.php</loc>
-        <lastmod>2026-07-05</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc><?php echo $base_url; ?>service/water-cleanup.php</loc>
-        <lastmod>2026-07-05</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc><?php echo $base_url; ?>service/water-heaters.php</loc>
-        <lastmod>2026-07-05</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc><?php echo $base_url; ?>service/water-quality.php</loc>
-        <lastmod>2026-07-05</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
 </urlset>

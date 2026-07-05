@@ -100,13 +100,18 @@ if (empty(parse_url($canonical_url, PHP_URL_PATH))) {
             </a>
             
             <nav class="navbar" id="navbar">
-                <a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>index.php" class="nav-link">Locations</a>
-                <a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>service/plumbing-repair.php" class="nav-link">Plumbing</a>
-                <a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>service/drain-cleaning.php" class="nav-link">Drains</a>
-                <a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>service/sewer-line-services.php" class="nav-link">Commercial</a>
-                <a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>service/water-quality.php" class="nav-link">Water Quality</a>
-                <a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>service/water-cleanup.php" class="nav-link">Water Damage</a>
-                <a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>service/coupons.php" class="nav-link" style="color: var(--rr-red);">Coupons</a>
+                <a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>index.php" class="nav-link">Home</a>
+                <a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>about.php" class="nav-link">About</a>
+                <div class="nav-item dropdown">
+                    <a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>service.php" class="nav-link dropdown-toggle">Service <i class="fa-solid fa-chevron-down" style="font-size: 0.65rem; margin-left: 2px;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>service/water-damage.php">Water Damage</a>
+                        <a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>service/drain-cleaning.php">Drain Cleaning</a>
+                        <a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>service/emergency-plumbing.php">Emergency Plumbing</a>
+                    </div>
+                </div>
+                <a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>blog.php" class="nav-link">Blog</a>
+                <a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>contact.php" class="nav-link">Contact Us</a>
             </nav>
 
             <div class="header-ctas">

@@ -36,7 +36,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
         <div class="breadcrumbs">
             <a href="<?php echo $path_prefix; ?>index.php">Home</a>
             <span>/</span>
-            <a href="<?php echo $path_prefix; ?>service/plumbing-repair.php">Plumbing</a>
+            <a href="<?php echo $path_prefix; ?>service.php">Services</a>
             <span>/</span>
             <span class="active">Drain Cleaning</span>
         </div>
@@ -59,8 +59,8 @@ require_once dirname(__DIR__) . '/includes/header.php';
                     <a href="<?php echo $path_prefix; ?>contact.php" class="btn btn-schedule" style="padding: 14px 28px;"><i class="fa-regular fa-calendar-days"></i> Schedule Online</a>
                     
                     <div class="coupon-tag-link">
-                        <i class="fa-solid fa-tag"></i>
-                        <span>Save Money! Check out available <a href="<?php echo $path_prefix; ?>service/coupons.php">coupons</a></span>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Fast 24/7 Dispatch Across the 5 Boroughs</span>
                     </div>
                 </div>
             </div>

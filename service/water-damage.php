@@ -4,8 +4,8 @@ $page_title = "Water Damage Restoration & Cleanup in NYC";
 $page_desc = "Roto-Rooter offers emergency water extraction, drying, and structural sanitization. Available 24/7. Direct insurance billing. Call 212-687-1726 today.";
 
 // Construct Dynamic JSON-LD Schema
-$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
-$host = $_SERVER['HTTP_HOST'];
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || (isset($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == 443)) ? "https://" : "http://";
+$host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'localhost';
 $base_url = $protocol . $host . '/';
 
 $page_schema = json_encode([
@@ -36,7 +36,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
         <div class="breadcrumbs">
             <a href="<?php echo $path_prefix; ?>index.php">Home</a>
             <span>/</span>
-            <a href="<?php echo $path_prefix; ?>service/plumbing-repair.php">Plumbing</a>
+            <a href="<?php echo $path_prefix; ?>service.php">Services</a>
             <span>/</span>
             <span class="active">Water Damage</span>
         </div>
@@ -59,8 +59,8 @@ require_once dirname(__DIR__) . '/includes/header.php';
                     <a href="<?php echo $path_prefix; ?>contact.php" class="btn btn-schedule" style="padding: 14px 28px;"><i class="fa-regular fa-calendar-days"></i> Schedule Online</a>
                     
                     <div class="coupon-tag-link">
-                        <i class="fa-solid fa-tag"></i>
-                        <span>Save Money! Check out available <a href="<?php echo $path_prefix; ?>service/coupons.php">coupons</a></span>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Fast Emergency Response Times in NYC</span>
                     </div>
                 </div>
             </div>
