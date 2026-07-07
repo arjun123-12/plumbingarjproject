@@ -64,7 +64,7 @@ if (empty(parse_url($canonical_url, PHP_URL_PATH))) {
 <body>
 
     <!-- 1. Top Utility Header Bar -->
-    <div class="top-header-bar">
+    <!-- <div class="top-header-bar">
         <div class="container top-bar-inner">
             <div class="top-bar-left">
                 <i class="fa-solid fa-location-dot"></i>
@@ -86,16 +86,15 @@ if (empty(parse_url($canonical_url, PHP_URL_PATH))) {
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- 2. Main Sticky Header & Navigation -->
     <header class="main-header">
         <div class="container navbar-container">
             <a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>index.php" class="brand-logo">
                 <span class="logo-icon-wrap">
-                    <span class="logo-text-roto">Roto</span>
-                    <span class="logo-text-divider">-</span>
-                    <span class="logo-text-rooter">Rooter</span>
+                    <span class="logo-text-roto" style="color: var(--rr-blue); font-style: normal;">Go</span>
+                    <span class="logo-text-rooter" style="color: var(--rr-red); font-weight: 900; margin-left: 4px;">Brooklyn Plumber</span>
                 </span>
             </a>
             

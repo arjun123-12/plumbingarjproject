@@ -9,12 +9,11 @@
                 <div class="footer-brand">
                     <a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>index.php" class="brand-logo" style="margin-bottom: 20px; display: inline-flex;">
                         <span class="logo-icon-wrap">
-                            <span class="logo-text-roto">Roto</span>
-                            <span class="logo-text-divider">-</span>
-                            <span class="logo-text-rooter">Rooter</span>
+                            <span class="logo-text-roto" style="color: var(--rr-blue); font-style: normal;">Go</span>
+                            <span class="logo-text-rooter" style="color: var(--rr-red); font-weight: 900; margin-left: 4px;">Brooklyn Plumber</span>
                         </span>
                     </a>
-                    <p>Roto-Rooter provides expert plumbing and drain cleaning services 24/7. Trusted for over 90 years.</p>
+                    <p>Go Brooklyn Plumber provides expert plumbing, drain cleaning, and water damage solutions 24/7. Trusted by Brooklyn locals.</p>
                     
                     <div class="emergency-callout-card">
                         <div class="callout-icon-circle">
@@ -22,7 +21,7 @@
                         </div>
                         <div class="callout-info">
                             <span class="callout-label">24/7 Emergency Service</span>
-                            <span class="callout-phone">(800) 768-6911</span>
+                            <span class="callout-phone">212-687-1726</span>
                         </div>
                     </div>
                 </div>
@@ -67,7 +66,7 @@
                             <i class="fa-solid fa-location-dot"></i>
                         </div>
                         <div class="location-info">
-                            <h4>New York, NY</h4>
+                            <h4>Brooklyn, NY</h4>
                             <p>and Surrounding Areas</p>
                         </div>
                     </div>
@@ -114,8 +113,8 @@
                         <i class="fa-solid fa-award"></i>
                     </div>
                     <div class="mid-highlight-info">
-                        <h4>90+ Years of Trust</h4>
-                        <p>Delivering reliable plumbing solutions since 1935.</p>
+                        <h4>15+ Years of Trust</h4>
+                        <p>Delivering reliable plumbing solutions in Brooklyn.</p>
                     </div>
                 </div>
                 
@@ -136,7 +135,7 @@
         <!-- Copyright Bottom Strip -->
         <div class="copyright-bottom-strip">
             <div class="container copyright-inner">
-                <p>&copy; 2024 Roto-Rooter Services Company. All Rights Reserved.</p>
+                <p>&copy; 2026 Go Brooklyn Plumber. All Rights Reserved.</p>
                 <div class="copyright-links">
                     <a href="#">Privacy Policy</a>
                     <span style="opacity: 0.3;">|</span>

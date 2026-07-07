@@ -4,9 +4,9 @@
  */
 
 // Define application settings
-define('APP_NAME', 'ProServices');
+define('APP_NAME', 'Go Brooklyn Plumber');
 define('APP_URL', 'http://localhost/img/p-services');
-define('CONTACT_EMAIL', 'info@proservices.com');
+define('CONTACT_EMAIL', 'info@gobrooklynplumber.com');
 
 // Start session if not started
 if (session_status() === PHP_SESSION_NONE) {

@@ -361,6 +361,11 @@ a {
     overflow: hidden;
 }
 
+.hero-home-bg {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 40%, rgba(232, 237, 245, 0.92) 100%), url('../images/hero_plumbing_bg.png') no-repeat center center;
+    background-size: cover;
+}
+
 .hero-grid {
     display: grid;
     grid-template-columns: 1.15fr 0.85fr;
@@ -2236,3 +2241,73 @@ div[style*="border:2px dashed var(--rr-red)"] {
     background-color: var(--rr-light-red-bg) !important;
     border-color: rgba(218, 41, 28, 0.25) !important;
 }
+
+/* Why Choose Us Section */
+.why-choose-section {
+    padding: 80px 0;
+    background-color: var(--bg-cream-dark);
+    border-top: 1px solid var(--border-cream);
+    border-bottom: 1px solid var(--border-cream);
+}
+
+.why-choose-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.why-choose-card {
+    background-color: #ffffff;
+    border: 1px solid var(--border-cream);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(6, 18, 44, 0.02);
+    transition: var(--transition);
+}
+
+.why-choose-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(6, 18, 44, 0.06);
+}
+
+.why-choose-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--rr-blue);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.why-choose-card h3 i {
+    color: var(--rr-red);
+}
+
+.why-choose-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.why-choose-list li {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.4;
+}
+
+.why-choose-list li:last-child {
+    margin-bottom: 0;
+}
+
+.why-choose-list li i {
+    color: #10b981; /* Green checkmark */
+    margin-top: 4px;
+}
+

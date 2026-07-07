@@ -1,0 +1,24 @@
+# Enable Rewrite Engine
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Exclude the assets directory from rewriting (so CSS, images, and JS load directly)
+    RewriteCond %{REQUEST_URI} !^/assets/ [NC]
+
+    # Rewrite all other requests to the router script
+    RewriteRule ^(.*)$ api/index.php [L,QSA]
+</IfModule>
+
+# Prevent directory listing
+Options -Indexes
+
+# Protect system and configuration files from direct access
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+<FilesMatch "^(vercel\.json|README)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

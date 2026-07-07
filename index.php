@@ -1,7 +1,7 @@
 <?php 
 $path_prefix = '';
-$page_title = "Professional 24/7 Plumbing Service in New York City";
-$page_desc = "Roto-Rooter is New York City's premier 24/7 plumbing & drain cleaning company. Fast emergency services, upfront pricing, licensed plumbers. Call 212-687-1726.";
+$page_title = "Reliable Plumbing Brooklyn Solutions by Your Local Plumber Brooklyn";
+$page_desc = "Welcome to Go Brooklyn Plumber, the team locals rely on when they need a dependable plumber Brooklyn without the hassle. Emergency services and fast response across Brooklyn.";
 
 // Construct Dynamic JSON-LD Schema
 $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
@@ -11,24 +11,24 @@ $base_url = $protocol . $host . '/';
 $page_schema = json_encode([
   "@context" => "https://schema.org",
   "@type" => "PlumbingService",
-  "name" => "Roto-Rooter Plumbing & Drain Service (New York)",
-  "image" => $base_url . "assets/images/roto_plumber.png",
+  "name" => "Go Brooklyn Plumber",
+  "image" => $base_url . "assets/images/hero_plumbing_bg.png",
   "@id" => $base_url . "#plumbing-service",
   "url" => $base_url,
   "telephone" => "212-687-1726",
   "priceRange" => "$$",
   "address" => [
     "@type" => "PostalAddress",
-    "streetAddress" => "120 Broadway, Suite 400",
-    "addressLocality" => "New York",
+    "streetAddress" => "Brooklyn, NY",
+    "addressLocality" => "Brooklyn",
     "addressRegion" => "NY",
-    "postalCode" => "10271",
+    "postalCode" => "11201",
     "addressCountry" => "US"
   ],
   "geo" => [
     "@type" => "GeoCoordinates",
-    "latitude" => 40.7081,
-    "longitude" => -74.0111
+    "latitude" => 40.6782,
+    "longitude" => -73.9442
   ],
   "openingHoursSpecification" => [
     "@type" => "OpeningHoursSpecification",
@@ -44,31 +44,10 @@ $page_schema = json_encode([
     "opens" => "00:00",
     "closes" => "23:59"
   ],
-  "sameAs" => [
-    "https://www.facebook.com/RotoRooter",
-    "https://www.twitter.com/RotoRooter",
-    "https://www.youtube.com/user/RotoRooterCorp"
-  ],
   "areaServed" => [
     [
       "@type" => "AdministrativeArea",
-      "name" => "Manhattan"
-    ],
-    [
-      "@type" => "AdministrativeArea",
       "name" => "Brooklyn"
-    ],
-    [
-      "@type" => "AdministrativeArea",
-      "name" => "Queens"
-    ],
-    [
-      "@type" => "AdministrativeArea",
-      "name" => "Bronx"
-    ],
-    [
-      "@type" => "AdministrativeArea",
-      "name" => "Staten Island"
     ]
   ]
 ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
@@ -77,18 +56,18 @@ require_once __DIR__ . '/includes/header.php';
 ?>
 
 <!-- 1. Hero Section -->
-<section class="hero-section">
+<section class="hero-section hero-home-bg">
     <div class="container hero-grid">
         <!-- Left Side Column -->
         <div class="hero-content reveal-fade-left">
             <div class="hero-badge">
                 <i class="fa-solid fa-shield-halved"></i>
-                <span>NYC's Most Trusted Plumbing Company</span>
+                <span>Go Brooklyn Plumber</span>
             </div>
             
-            <h1 class="hero-title">Professional 24/7<br>Plumbing Service</h1>
+            <h1 class="hero-title">Reliable Plumbing<br>Brooklyn Solutions</h1>
             
-            <p class="hero-desc">Fast, reliable, and professional plumbing solutions when you need them most.</p>
+            <p class="hero-desc">Welcome to Go Brooklyn Plumber, the team locals rely on when they need a dependable plumber Brooklyn without the hassle. Whether it’s a small repair or something urgent, we handle it quickly and properly.</p>
             
             <div class="hero-callout-line">
                 <div class="hero-callout-label">Call for Plumbing Service:</div>
@@ -193,105 +172,14 @@ require_once __DIR__ . '/includes/header.php';
             <div class="about-content reveal-fade-left">
                 <div class="about-nyc-eyebrow">
                     <i class="fa-solid fa-shield-halved"></i>
-                    <span>NYC's Most Trusted Plumbing Company</span>
+                    <span>Go Brooklyn Plumber</span>
                 </div>
                 
-                <h2 class="about-nyc-title">Trusted New York City Plumber for <span>Drains, Water Heaters & Water Cleanup</span></h2>
+                <h2 class="about-nyc-title">Reliable Plumbing Brooklyn Solutions by <span>Your Local Plumber Brooklyn</span></h2>
                 
-                <p class="about-nyc-desc">Need a New York City plumber who understands the unique plumbing challenges of the Big Apple? Choose Roto-Rooter, America's leading plumbing company since 1935. Our expert plumbing technicians tackle everything from aging infrastructure in historic buildings to low water pressure in high-rise buildings, ensuring your plumbing system runs smoothly.</p>
+                <p class="about-nyc-desc" style="font-size: 1.15rem; line-height: 1.8; margin-bottom: 20px; color: var(--text-dark); font-weight: 500;">Welcome to Go Brooklyn Plumber, the team locals rely on when they need a dependable plumber Brooklyn without the hassle. Whether it’s a small repair or something urgent, we handle it quickly and properly, with solutions that actually fit how Brooklyn homes and businesses operate.</p>
                 
-                <h3 class="about-nyc-subtitle">When you call Roto-Rooter of New York, you get:</h3>
-                
-                <!-- 2-Column List with circular icons -->
-                <div class="icon-list-grid">
-                    <!-- Item 1 -->
-                    <div class="icon-list-item">
-                        <div class="icon-list-circle">
-                            <i class="fa-regular fa-clock"></i>
-                        </div>
-                        <div class="icon-list-info">
-                            <h4>Same-Day Service</h4>
-                            <p>Quick and efficient solutions.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Item 2 -->
-                    <div class="icon-list-item">
-                        <div class="icon-list-circle">
-                            <i class="fa-regular fa-id-badge"></i>
-                        </div>
-                        <div class="icon-list-info">
-                            <h4>Experienced Technicians</h4>
-                            <p>Professional and highly trained plumbing experts.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Item 3 -->
-                    <div class="icon-list-item">
-                        <div class="icon-list-circle alert-color">
-                            <span style="font-size: 0.8rem; font-weight: 800;">24/7</span>
-                        </div>
-                        <div class="icon-list-info">
-                            <h4>24/7 Availability</h4>
-                            <p>We're here for you every day, including holidays.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Item 4 -->
-                    <div class="icon-list-item">
-                        <div class="icon-list-circle">
-                            <i class="fa-solid fa-screwdriver-wrench"></i>
-                        </div>
-                        <div class="icon-list-info">
-                            <h4>Advanced Equipment</h4>
-                            <p>State-of-the-art diagnostics and tools.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Item 5 -->
-                    <div class="icon-list-item">
-                        <div class="icon-list-circle">
-                            <i class="fa-solid fa-dollar-sign"></i>
-                        </div>
-                        <div class="icon-list-info">
-                            <h4>No Extra Charges</h4>
-                            <p>No additional fees for services on holidays, nights, or weekends.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Item 6 -->
-                    <div class="icon-list-item">
-                        <div class="icon-list-circle">
-                            <i class="fa-solid fa-tags"></i>
-                        </div>
-                        <div class="icon-list-info">
-                            <h4>Special Discounts</h4>
-                            <p>Savings for seniors and military personnel.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Item 7 -->
-                    <div class="icon-list-item">
-                        <div class="icon-list-circle">
-                            <i class="fa-regular fa-file-lines"></i>
-                        </div>
-                        <div class="icon-list-info">
-                            <h4>Free Onsite Estimates</h4>
-                            <p>Know the cost upfront with no surprises.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Item 8 -->
-                    <div class="icon-list-item">
-                        <div class="icon-list-circle">
-                            <i class="fa-regular fa-map"></i>
-                        </div>
-                        <div class="icon-list-info">
-                            <h4>Coupons and Financing</h4>
-                            <p>Budget-friendly options available.</p>
-                        </div>
-                    </div>
-                </div>
+                <p class="about-nyc-desc" style="line-height: 1.7; color: var(--text-muted); margin-bottom: 0;">From older brownstones to newer apartments, we know the kind of plumbing issues that come with living here. That local experience helps us respond faster, fix things the right way, and make sure the problem doesn’t keep coming back. And when things can’t wait, you can count on an emergency plumber Brooklyn who shows up ready to fix the problem—no delays, no runaround.</p>
             </div>
             
             <!-- Right Side Sidebar Cards -->
@@ -302,9 +190,9 @@ require_once __DIR__ . '/includes/header.php';
                         <div class="metric-icon-circle">
                             <i class="fa-solid fa-shield-halved"></i>
                         </div>
-                        <div class="metric-num">90+</div>
-                        <div class="metric-label">Years of Trust</div>
-                        <div class="metric-sub">Since 1935</div>
+                        <div class="metric-num">15+</div>
+                        <div class="metric-label">Years Local</div>
+                        <div class="metric-sub">Brooklyn Built</div>
                     </div>
                     <div class="metric-col">
                         <div class="metric-icon-circle" style="color: var(--rr-yellow); background-color: rgba(237, 185, 0, 0.05); border-color: rgba(237, 185, 0, 0.15);">
@@ -333,8 +221,8 @@ require_once __DIR__ . '/includes/header.php';
                 
                 <!-- Navy CTA Card -->
                 <div class="cta-navy-card">
-                    <h3>We've got you covered when you need us most.</h3>
-                    <p>We deliver reliable service, fair pricing, and a team that genuinely cares about your needs. Call us at <strong>212-687-1726</strong> or use our online scheduling form. Experience the difference local expertise makes!</p>
+                    <h3>Dealing with a leak, a stubborn clog, or something that just can’t wait?</h3>
+                    <p>Don’t let it turn into a bigger problem. With Go Brooklyn Plumber, you’ve got a reliable plumber ready to step in, fix it properly, and take the stress off your plate.</p>
                     <a href="contact.php" class="btn btn-sidebar-schedule"><i class="fa-regular fa-calendar-days"></i> Schedule Online <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></a>
                 </div>
             </div>
@@ -384,37 +272,109 @@ require_once __DIR__ . '/includes/header.php';
     </div>
 </section>
 
-<!-- 4. Roto-Rooter Services Overview -->
+<!-- 4. Plumbing Brooklyn Services Section -->
 <section style="padding: 80px 0; background-color: #f7f8fb; border-top: 1px solid var(--border-light);">
     <div class="container">
         <div class="section-header reveal-fade-up" style="text-align: center; margin-bottom: 50px;">
-            <h2 style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 900; color: var(--rr-blue); text-transform: uppercase;">Our Core Plumbing Solutions</h2>
-            <p style="color: var(--text-muted); font-size: 1rem; margin-top: 8px;">From routine checks to large-scale commercial cleaning, we do it all.</p>
+            <h2 style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 900; color: var(--rr-blue); text-transform: uppercase;">Plumbing Brooklyn Services That Keep Your Home Running Smoothly</h2>
+            <p style="color: var(--text-muted); font-size: 1rem; margin-top: 8px;">Professional, dependable, and efficient solutions tailored to your space.</p>
         </div>
         
         <div class="grid-3" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px;">
             <!-- Card 1 -->
             <div class="service-card" style="background-color: #ffffff; border: 1px solid var(--border-light); padding: 36px 30px; border-radius: 6px; box-shadow: 0 4px 12px rgba(6,18,44,0.03);">
                 <div style="color: var(--rr-red); font-size: 2.2rem; margin-bottom: 20px;"><i class="fa-solid fa-sink"></i></div>
-                <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--rr-blue); text-transform: uppercase; margin-bottom: 12px;">Residential Plumbing</h3>
-                <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; margin-bottom: 20px;">Sewer repairs, water line installs, faucet replacements, water heaters, and general household solutions.</p>
+                <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--rr-blue); text-transform: uppercase; margin-bottom: 15px;">Drain Cleaning Service by Expert Plumber Brooklyn</h3>
+                <ul style="list-style: none; padding: 0; margin: 0 0 24px 0; text-align: left; display: flex; flex-direction: column; gap: 10px;">
+                    <li style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.5; display: flex; gap: 8px; align-items: flex-start;"><i class="fa-solid fa-check" style="color: var(--rr-red); margin-top: 3px;"></i><span>Slow drains, bad smells, or full blockages—we clear it properly, not temporarily</span></li>
+                    <li style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.5; display: flex; gap: 8px; align-items: flex-start;"><i class="fa-solid fa-check" style="color: var(--rr-red); margin-top: 3px;"></i><span>We don’t just push the clog deeper, we remove it, so it doesn’t come back</span></li>
+                    <li style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.5; display: flex; gap: 8px; align-items: flex-start;"><i class="fa-solid fa-check" style="color: var(--rr-red); margin-top: 3px;"></i><span>Kitchen sinks, bathroom drains, and main sewer lines handled with care</span></li>
+                    <li style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.5; display: flex; gap: 8px; align-items: flex-start;"><i class="fa-solid fa-check" style="color: var(--rr-red); margin-top: 3px;"></i><span>Practical advice to help you avoid repeat issues</span></li>
+                </ul>
                 <a href="contact.php" style="color: var(--rr-red); font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">Book Service &rarr;</a>
             </div>
 
             <!-- Card 2 -->
             <div class="service-card" style="background-color: #ffffff; border: 1px solid var(--border-light); padding: 36px 30px; border-radius: 6px; box-shadow: 0 4px 12px rgba(6,18,44,0.03);">
                 <div style="color: var(--rr-red); font-size: 2.2rem; margin-bottom: 20px;"><i class="fa-solid fa-water"></i></div>
-                <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--rr-blue); text-transform: uppercase; margin-bottom: 12px;">Drain Cleaning</h3>
-                <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; margin-bottom: 20px;">Clogged sinks, main sewer line cleaning, sewer camera inspections, and high-pressure water jetting.</p>
+                <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--rr-blue); text-transform: uppercase; margin-bottom: 15px;">Water Damage Plumbing Brooklyn – Fast & Reliable Solutions</h3>
+                <ul style="list-style: none; padding: 0; margin: 0 0 24px 0; text-align: left; display: flex; flex-direction: column; gap: 10px;">
+                    <li style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.5; display: flex; gap: 8px; align-items: flex-start;"><i class="fa-solid fa-check" style="color: var(--rr-red); margin-top: 3px;"></i><span>Leaks, burst pipes, or unexpected water spread—we act quickly to control the situation</span></li>
+                    <li style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.5; display: flex; gap: 8px; align-items: flex-start;"><i class="fa-solid fa-check" style="color: var(--rr-red); margin-top: 3px;"></i><span>We help reduce damage to walls, flooring, and your belongings</span></li>
+                    <li style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.5; display: flex; gap: 8px; align-items: flex-start;"><i class="fa-solid fa-check" style="color: var(--rr-red); margin-top: 3px;"></i><span>Proper inspection to catch the root cause, not just the surface issue</span></li>
+                    <li style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.5; display: flex; gap: 8px; align-items: flex-start;"><i class="fa-solid fa-check" style="color: var(--rr-red); margin-top: 3px;"></i><span>Long-lasting repair solutions you can rely on</span></li>
+                </ul>
                 <a href="contact.php" style="color: var(--rr-red); font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">Book Service &rarr;</a>
             </div>
 
             <!-- Card 3 -->
             <div class="service-card" style="background-color: #ffffff; border: 1px solid var(--border-light); padding: 36px 30px; border-radius: 6px; box-shadow: 0 4px 12px rgba(6,18,44,0.03);">
-                <div style="color: var(--rr-red); font-size: 2.2rem; margin-bottom: 20px;"><i class="fa-solid fa-house-chimney-crack"></i></div>
-                <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--rr-blue); text-transform: uppercase; margin-bottom: 12px;">Water Damage Cleanup</h3>
-                <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; margin-bottom: 20px;">Emergency water removal, structural drying, basement pumping, sewage sanitation, and cleanup.</p>
+                <div style="color: var(--rr-red); font-size: 2.2rem; margin-bottom: 20px;"><i class="fa-solid fa-clock"></i></div>
+                <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--rr-blue); text-transform: uppercase; margin-bottom: 15px;">24/7 Emergency Plumber Brooklyn – Ready When You Need Us</h3>
+                <ul style="list-style: none; padding: 0; margin: 0 0 24px 0; text-align: left; display: flex; flex-direction: column; gap: 10px;">
+                    <li style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.5; display: flex; gap: 8px; align-items: flex-start;"><i class="fa-solid fa-check" style="color: var(--rr-red); margin-top: 3px;"></i><span>Immediate support from a trusted emergency plumber Brooklyn, day or night</span></li>
+                    <li style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.5; display: flex; gap: 8px; align-items: flex-start;"><i class="fa-solid fa-check" style="color: var(--rr-red); margin-top: 3px;"></i><span>Fast response across Brooklyn—because delays make things worse</span></li>
+                    <li style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.5; display: flex; gap: 8px; align-items: flex-start;"><i class="fa-solid fa-check" style="color: var(--rr-red); margin-top: 3px;"></i><span>We come prepared to fix the issue on the spot</span></li>
+                    <li style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.5; display: flex; gap: 8px; align-items: flex-start;"><i class="fa-solid fa-check" style="color: var(--rr-red); margin-top: 3px;"></i><span>Real peace of mind during stressful plumbing situations</span></li>
+                </ul>
                 <a href="contact.php" style="color: var(--rr-red); font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">Book Service &rarr;</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 4.5. Why Choose Go Brooklyn Plumber Section -->
+<section class="why-choose-section">
+    <div class="container">
+        <div class="section-header reveal-fade-up" style="text-align: center; margin-bottom: 30px;">
+            <span class="section-subtitle" style="display: block; font-size: 0.85rem; font-weight: 800; text-transform: uppercase; color: var(--rr-red); letter-spacing: 1.5px; margin-bottom: 8px;">Our Core Strengths</span>
+            <h2 style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 900; color: var(--rr-blue); text-transform: uppercase;">Why Choose Go Brooklyn Plumber</h2>
+        </div>
+        
+        <div class="why-choose-grid">
+            <!-- Card 1 -->
+            <div class="why-choose-card reveal-fade-up">
+                <h3><i class="fa-solid fa-user-gear"></i> Local Plumbing Brooklyn Experts Who Get It</h3>
+                <ul class="why-choose-list">
+                    <li><i class="fa-solid fa-circle-check"></i> Experience with Brooklyn’s older pipes, tight layouts, and modern buildings</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Solutions tailored to your property—not one-size-fits-all fixes</li>
+                </ul>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="why-choose-card reveal-fade-up">
+                <h3><i class="fa-solid fa-clock"></i> Reliable Plumber Brooklyn – No Delays, No Guesswork</h3>
+                <ul class="why-choose-list">
+                    <li><i class="fa-solid fa-circle-check"></i> On-time service and quick turnaround</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Clear communication without technical confusion</li>
+                </ul>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="why-choose-card reveal-fade-up">
+                <h3><i class="fa-solid fa-tag"></i> Honest Pricing for Plumbing Brooklyn Services</h3>
+                <ul class="why-choose-list">
+                    <li><i class="fa-solid fa-circle-check"></i> Upfront quotes before any work begins</li>
+                    <li><i class="fa-solid fa-circle-check"></i> No hidden costs or last-minute surprises</li>
+                </ul>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="why-choose-card reveal-fade-up">
+                <h3><i class="fa-solid fa-award"></i> Quality Work That Lasts</h3>
+                <ul class="why-choose-list">
+                    <li><i class="fa-solid fa-circle-check"></i> Skilled professionals focused on long-term results</li>
+                    <li><i class="fa-solid fa-circle-check"></i> No shortcuts or temporary patchwork fixes</li>
+                </ul>
+            </div>
+            
+            <!-- Card 5 -->
+            <div class="why-choose-card reveal-fade-up">
+                <h3><i class="fa-solid fa-handshake-angle"></i> Respectful Service, Every Time</h3>
+                <ul class="why-choose-list">
+                    <li><i class="fa-solid fa-circle-check"></i> Clean, organized work with minimal disruption</li>
+                    <li><i class="fa-solid fa-circle-check"></i> We treat your home or space with care</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -424,7 +384,7 @@ require_once __DIR__ . '/includes/header.php';
 <section class="reviews-section">
     <div class="container">
         <div class="reviews-header">
-            <h2 class="reviews-title">Customer Reviews in New York</h2>
+            <h2 class="reviews-title">Customer Reviews in Brooklyn</h2>
             <div class="reviews-summary-bar">
                 <!-- SVG Google Icon -->
                 <svg viewBox="0 0 24 24" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
