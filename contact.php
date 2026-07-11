@@ -43,6 +43,7 @@ $page_schema = json_encode([
 ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
 
 require_once __DIR__ . '/includes/header.php'; 
+require_once __DIR__ . '/includes/db.php';
 
 // Basic Form Handler
 $status = '';
@@ -57,8 +58,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $status = 'error_email';
     } else {
-        // Mock successful delivery
-        $status = 'success';
+        if (save_quote_request($name, $email, $subject, $message)) {
+            $status = 'success';
+        } else {
+            $status = 'error_db';
+        }
     }
 }
 ?>
@@ -116,7 +120,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <i class="fa-solid fa-circle-check"></i>
                             <div>
                                 <strong>Request Received!</strong><br>
-                                Thank you, <?php echo htmlspecialchars($name); ?>. A Roto-Rooter representative or technician will contact you shortly.
+                                Thank you, <?php echo htmlspecialchars($name); ?>. A Go Brooklyn Plumber representative or technician will contact you shortly.
                             </div>
                         </div>
                     <?php elseif ($status === 'error_empty'): ?>
@@ -133,6 +137,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div>
                                 <strong>Invalid Email Address!</strong><br>
                                 Please enter a valid email format so we can reply to you.
+                            </div>
+                        </div>
+                    <?php elseif ($status === 'error_db'): ?>
+                        <div class="alert-success" style="background-color:rgba(239, 68, 68, 0.1); border-color:rgba(239, 68, 68, 0.3); color:#dc2626;">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                            <div>
+                                <strong>Database Error!</strong><br>
+                                We couldn't save your request due to a database issue. Please call us directly.
                             </div>
                         </div>
                     <?php endif; ?>

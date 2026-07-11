@@ -45,26 +45,27 @@ echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
         <priority>0.8</priority>
     </url>
     <url>
-        <loc><?php echo $base_url; ?>blog.php</loc>
-        <lastmod>2026-07-05</lastmod>
+        <loc><?php echo $base_url; ?>blog/</loc>
+        <lastmod>2026-07-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
+
     <url>
-        <loc><?php echo $base_url; ?>blog-details.php?id=1</loc>
-        <lastmod>2026-07-05</lastmod>
+        <loc><?php echo $base_url; ?>blog/emergency-drain-cleaning-prevents-water-damage.php</loc>
+        <lastmod>2026-07-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc><?php echo $base_url; ?>blog-details.php?id=2</loc>
-        <lastmod>2026-07-05</lastmod>
+        <loc><?php echo $base_url; ?>blog/water-removal-services.php</loc>
+        <lastmod>2026-07-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc><?php echo $base_url; ?>blog-details.php?id=3</loc>
-        <lastmod>2026-07-05</lastmod>
+        <loc><?php echo $base_url; ?>blog/emergency-drain-service.php</loc>
+        <lastmod>2026-07-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>

@@ -22,8 +22,11 @@ if (empty($request_path) || $request_path === 'index.php') {
 } elseif ($request_path === 'robots.txt') {
     require BASE_PATH . '/api/robots.php';
 } else {
-    // Check if the file exists in the root
+    // Check if the file exists
     $file = BASE_PATH . '/' . $request_path;
+    if (is_dir($file)) {
+        $file = rtrim($file, '/') . '/index.php';
+    }
     if (file_exists($file) && is_file($file)) {
         require $file;
     } else {

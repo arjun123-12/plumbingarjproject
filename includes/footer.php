@@ -8,10 +8,7 @@
                 <!-- Column 1: Brand Info -->
                 <div class="footer-brand">
                     <a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>index.php" class="brand-logo" style="margin-bottom: 20px; display: inline-flex;">
-                        <span class="logo-icon-wrap">
-                            <span class="logo-text-roto" style="color: var(--rr-blue); font-style: normal;">Go</span>
-                            <span class="logo-text-rooter" style="color: var(--rr-red); font-weight: 900; margin-left: 4px;">Brooklyn Plumber</span>
-                        </span>
+                        <img src="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>assets/images/logo.jpeg" alt="Go Brooklyn Plumber Logo" class="brand-logo-img" style="height: 48px;">
                     </a>
                     <p>Go Brooklyn Plumber provides expert plumbing, drain cleaning, and water damage solutions 24/7. Trusted by Brooklyn locals.</p>
                     
@@ -42,7 +39,7 @@
                     <h3>Company</h3>
                     <ul class="footer-links-list">
                         <li><a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>about.php">About Us <i class="fa-solid fa-chevron-right"></i></a></li>
-                        <li><a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>blog.php">Blog <i class="fa-solid fa-chevron-right"></i></a></li>
+                        <li><a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>blog/">Blog <i class="fa-solid fa-chevron-right"></i></a></li>
                         <li><a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>contact.php">Contact Us <i class="fa-solid fa-chevron-right"></i></a></li>
                         <li><a href="#">Careers <i class="fa-solid fa-chevron-right"></i></a></li>
                     </ul>
@@ -54,8 +51,7 @@
                     <ul class="footer-links-list">
                         <li><a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>contact.php">Schedule Service <i class="fa-solid fa-chevron-right"></i></a></li>
                         <li><a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>reviews.php">Customer Reviews <i class="fa-solid fa-chevron-right"></i></a></li>
-                        <li><a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>sitemap.xml">Site Map <i class="fa-solid fa-chevron-right"></i></a></li>
-                    </ul>
+                                           </ul>
                 </div>
 
                 <!-- Column 5: SERVICE AREA & SOCIAL -->
@@ -82,54 +78,7 @@
 
             </div>
             
-            <!-- Mid Footer highlights strip -->
-            <div class="mid-footer-highlights-bar">
-                
-                <!-- Highlight 1 -->
-                <div class="mid-highlight-col">
-                    <div class="mid-highlight-icon">
-                        <i class="fa-solid fa-clock-rotate-left"></i>
-                    </div>
-                    <div class="mid-highlight-info">
-                        <h4>24/7 Availability</h4>
-                        <p>We're here anytime, day or night.</p>
-                    </div>
-                </div>
-                
-                <!-- Highlight 2 -->
-                <div class="mid-highlight-col">
-                    <div class="mid-highlight-icon">
-                        <i class="fa-solid fa-shield-halved"></i>
-                    </div>
-                    <div class="mid-highlight-info">
-                        <h4>Licensed & Insured</h4>
-                        <p>Professional service you can trust.</p>
-                    </div>
-                </div>
-                
-                <!-- Highlight 3 -->
-                <div class="mid-highlight-col">
-                    <div class="mid-highlight-icon">
-                        <i class="fa-solid fa-award"></i>
-                    </div>
-                    <div class="mid-highlight-info">
-                        <h4>15+ Years of Trust</h4>
-                        <p>Delivering reliable plumbing solutions in Brooklyn.</p>
-                    </div>
-                </div>
-                
-                <!-- Highlight 4 -->
-                <div class="mid-highlight-col">
-                    <div class="mid-highlight-icon">
-                        <i class="fa-solid fa-thumbs-up"></i>
-                    </div>
-                    <div class="mid-highlight-info">
-                        <h4>Satisfaction Guaranteed</h4>
-                        <p>We stand behind our work 100%.</p>
-                    </div>
-                </div>
-                
-            </div>
+          
         </div>
         
         <!-- Copyright Bottom Strip -->

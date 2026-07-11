@@ -92,10 +92,7 @@ if (empty(parse_url($canonical_url, PHP_URL_PATH))) {
     <header class="main-header">
         <div class="container navbar-container">
             <a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>index.php" class="brand-logo">
-                <span class="logo-icon-wrap">
-                    <span class="logo-text-roto" style="color: var(--rr-blue); font-style: normal;">Go</span>
-                    <span class="logo-text-rooter" style="color: var(--rr-red); font-weight: 900; margin-left: 4px;">Brooklyn Plumber</span>
-                </span>
+                <img src="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>assets/images/logo.jpeg" alt="Go Brooklyn Plumber Logo" class="brand-logo-img">
             </a>
             
             <nav class="navbar" id="navbar">
@@ -109,7 +106,7 @@ if (empty(parse_url($canonical_url, PHP_URL_PATH))) {
                         <a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>service/emergency-plumbing.php">Emergency Plumbing</a>
                     </div>
                 </div>
-                <a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>blog.php" class="nav-link">Blog</a>
+                <a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>blog/" class="nav-link">Blog</a>
                 <a href="<?php echo isset($path_prefix) ? $path_prefix : ''; ?>contact.php" class="nav-link">Contact Us</a>
             </nav>
 
